@@ -10,6 +10,7 @@ echo "#include <stdlib.h>
 main()
 {
     
+    exit(0);
 }" >> $projet/main.c
 
 echo "#include <stdlib.h>
