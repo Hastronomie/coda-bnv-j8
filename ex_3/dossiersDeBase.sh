@@ -28,17 +28,18 @@ echo "#ifndef ___H__
 #endif">> $projet/$projet.h
 
 echo "#Makefile
-NAME = 
+NAME = $projet 
 
-SRCS = main.c \
-	.c
+SRCS = main.c \\
+	$projet.c \\
+    .c
 
-all: $(NAME)
+all: \$(NAME)
 
-$(NAME): $(SRCS)
-	gcc $(SRCS) -o $(NAME)
+\$(NAME): \$(SRCS)
+	gcc \$(SRCS) -o \$(NAME)
 
 fclean:
-	rm -f $(NAME)
+	rm -f \$(NAME)
 
 re: fclean all">> $projet/Makefile
